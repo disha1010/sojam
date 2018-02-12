@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Semibold.ttf");
+  font-weight: 700;
+} 
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Bold.ttf");
+  font-weight: 800;
+}
+/*general style*/
+.body {
+  font-family: OpenSans, Roboto;
+}
+.header {
+  padding: 15px 15px 17px;
+}
+.header .navbar-sojam {
+  margin-bottom: 0;
+  border: none;
+  min-height: unset;
+}
+.header .navbar-toggle__black {
+  margin: 0;
+  padding-right: 0;
+  border: none;
+}
+.header .navbar-toggle__black .nav-icon {
+  color: #424242;
+  font-size: 20px;
+}
+.brand-logo {
+  background-image: url(../images/logo-header.png);
+  width: 170px;
+  height: 48px;
+}
+/*main page*/ 
+.main .main-slide {
+  background-image: url(../images/grain.jpg);
+  min-width: 320px;
+  height: 365px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.main .slide-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 55%;
+  background-color: #c52c13;
+}
+.main .slide-logo {
+  background-image: url(../images/pirigren-mobile.png);
+  width: 151px;
+  height: 34px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 18px 9px 18px 15px;
+}
+.main .slide-info {
+  position: absolute;
+  height: 100%;
+  background: rgba(46, 49, 45, 0.35);
+  color: #fff;
+  width: 130px;
+  top: 0;
+  left: 55%;
+  text-align: center;
+}
+.main .slide-info .info-item {
+  font-size: 14px;
+  font-weight: 700;
+}
