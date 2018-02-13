@@ -1,20 +1,27 @@
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Regular.ttf");
+  src: url("fonts/OpenSans-Regular.ttf");
 }
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Semibold.ttf");
-  font-weight: 700;
+  src: url("fonts/OpenSans-Semibold.ttf");
+  font-weight: 600;
 } 
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Bold.ttf");
-  font-weight: 800;
+  src: url("fonts/OpenSans-Bold.ttf");
+  font-weight: 700;
 }
 /*general style*/
 .body {
-  font-family: OpenSans, Roboto;
+  font-family: "OpenSans", Roboto;
+  font-size: 14px;
+}
+h3 {  
+  font-size: 1.286em;
+  font-weight: 700;
+  line-height: 1.278;
+  margin-top: 0;
 }
 .header {
   padding: 15px 15px 17px;
@@ -31,21 +38,71 @@
 }
 .header .navbar-toggle__black .nav-icon {
   color: #424242;
-  font-size: 20px;
+  font-size: 1.428em;
 }
 .brand-logo {
   background-image: url(../images/logo-header.png);
   width: 170px;
   height: 48px;
 }
+.btn-sojam {
+  border-radius: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  font-size: 0.928em;
+  font-family: "OpenSans", Roboto;
+  font-weight: 600;   
+  padding: 2px 15px 3px; 
+}
+.btn-sojam:hover {
+  background-color: #ab2711;
+  color: #fff;
+  border-color: #ab2711;
+}
+.btn-sojam .info-arrow__right {
+  vertical-align: middle;
+  padding-left: 10px;     
+  margin-bottom: 1px;
+  display: inline-block
+}
+.btn-sojam__white {
+  border-radius: 23.5px;
+  background-color: #fff;
+  color: #ab2711;
+  font-size: 0.857em;
+  padding: 5px 10px 6px; 
+  box-shadow: 0px 0px 16px 0px rgba(31, 36, 44, 0.33); 
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(31, 36, 44, 0.33); 
+}
+.btn-sojam__white:hover {
+  background-color: #ab2711;
+  color: #fff;
+}
+.btn-sojam__white .info-arrow__right {
+  padding-left: 8px; 
+}
+.btn-sojam__green {  
+  background-color: #fff;
+  color: #4c7b12;
+  border-color: #4c7b12;
+  padding: 4px 15px 5px;
+}
+.btn-sojam__green:hover {  
+  background-color: #4c7b12;
+  color: #fff;
+  border-color: #4c7b12;
+}
+
 /*main page*/ 
 .main .main-slide {
   background-image: url(../images/grain.jpg);
   min-width: 320px;
-  height: 365px;
+  height: 285px;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin-bottom: 60px;
 }
 .main .slide-title {
   position: absolute;
@@ -71,8 +128,206 @@
   top: 0;
   left: 55%;
   text-align: center;
+  padding:  10px 6px 19px 6px;
 }
 .main .slide-info .info-item {
-  font-size: 14px;
   font-weight: 700;
+  margin-bottom: 15px;
+}
+.main .slide-info .info-number {
+  font-size: 2.286em;
+  line-height: 0.75;
+  display: block;
+}
+.main .slide-info .info-item:nth-child(2) .info-number {
+  display: inline;
+}
+.main .slide-info .info-item:last-child {
+  margin-bottom: 20px;
+}
+
+/* banners on main page */
+.main .banners {
+  margin-bottom: 40px;
+}
+.main .banner-item {
+  margin-bottom: 30px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 214px;
+  box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+  -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+}
+.main .banner-bg__cold-nebula-metod {
+  background-image: url(../images/cold-nebula-metod.jpg);
+}
+.main .banner-bg__about-company {  
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/about-company.jpg);
+  background-size: cover;
+}
+.main .banner-bg__cold-nebula-system {
+  background-image: url(../images/cold-nebula-system.PNG);
+}
+.main .banner-bg__grain-quality {
+  background-image: url(../images/grain-quality.jpg);
+}
+.banner-category {
+  background-color: #7fb045;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 8px; 
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.786em;
+  font-weight: 600;
+  padding: 6px 10px;
+}
+.banner-date {
+  background-color: #7fb045;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 8px; 
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.714em;
+  font-weight: 700;
+  padding: 6px 10px;
+}
+.banner-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.banner-title {
+  margin-bottom: 10px;
+  color: #fff;
+}
+/* slider */
+.slider__sojam {
+  background-image: url(../images/sojam-office.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 214px;
+}
+.main .carousel-control-sojam {
+  width: unset;
+  opacity: 1;
+  bottom: 22px;
+  top: unset;
+  font-size: 1.428em;
+  line-height: 1;
+}
+.main .carousel-control-sojam:hover {
+  font-size: calc(1.428em + 10%);
+  bottom: 20px;
+}
+.main .carousel-control-sojam.right {
+  background-image: none;
+  right: 20px;
+}
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+.main .carousel-control-sojam.right:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  border-top-color: #fff;
+  animation: spinner .8s ease infinite;
+}
+.main .carousel-control-sojam.right:hover:before {
+  width: 27px;
+  height: 26px;
+  margin-top: -14px;
+  margin-left: -13px;
+}
+.main .carousel-control-sojam.left {
+  background-image: none;
+  right: 50px;
+  left: unset;
+}
+/* clients */
+.main .clients {
+  background-color: #f2f4f9;
+  text-align: center;
+  color: #424242;
+  font-weight: 700;
+  padding-top: 55px;
+  margin-bottom: 70px;
+}
+.main .section-title {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+.main .section-title:before {
+  position: absolute;
+  content: url(../images/sojam-red.png);
+  right: 0;
+  top: -15px;
+}
+.main .section-title:after {
+  position: absolute;
+  content: url(../images/sojam-green.png);
+  right: 4px;
+  bottom: -15px;
+}
+.main .section-description {
+  font-size: 1em;
+  margin-bottom: 35px
+}
+
+.main .information-block-article {
+  box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+  -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+  margin-bottom: 35px;
+}
+.main .information-block {
+  margin-bottom: 35px;
+}
+.main .information-block .article-picture {
+  width: 100%;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main .information-block .article-txt {
+  padding: 25px 20px;
+}
+.information-block .article-picture__documentation {
+  background-image: url(../images/docs.png);
+}
+.information-block .article-picture__call {
+  background-image: url(../images/standardiste.jpg);
+}
+.information-block .article-picture__booklet {
+  background-image: url(../images/catalogue.png);
+}
+.information-block .article-title {
+  color: #4c7b12;
+  margin-bottom: 20px;
+}
+.information-block .article-desc {
+  color: #424242;
+  margin-bottom: 25px;
+  font-size: 1em;
 }
