@@ -18,7 +18,7 @@
   <div class="main">
     <header class="header">
       <nav class="navbar navbar-sojam">
-        <div class="container-fluid">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header navbar-header-sojam">
             <div class="header-selfservice">
@@ -31,6 +31,14 @@
                 <span class="language-type ua">ua</span>
                 <span class="language-type ru active">ru</span>
               </div>
+              <form class="navbar-form navbar-form-sojam hidden-sm">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-sojam" placeholder="Поиск">
+                </div>
+                <button type="submit" class="btn btn-search">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
             </div>
             <button type="button" class="navbar-toggle collapsed navbar-toggle__black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
               aria-expanded="false">
@@ -40,54 +48,32 @@
               </span>
             </button>
             <a class="navbar-brand brand-logo" href="/"></a>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right navbar-nav-sojam">
+                <li class="navbar-nav-item txt__red">
+                  <a class="" href="about.html">О компании</a>
+                </li>
+                <li class="navbar-nav-item">
+                  <a href="products.html">Продукты</a>
+                </li>
+                <li class="navbar-nav-item">
+                  <a href="news.html">Новости</a>
+                </li>
+                <li class="navbar-nav-item">
+                  <a href="faq.html">FAQ</a>
+                </li>
+                <li class="navbar-nav-item">
+                  <a href="contacts.html">Контакты</a>
+                </li>
+                <li class="navbar-nav-item txt__green">
+                  <a class="" href="#">Связаться с нами</a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <a href="#">Link
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#">Action</a>
-                  </li>
-                  <li>
-                    <a href="#">Another action</a>
-                  </li>
-                  <li>
-                    <a href="#">Something else here</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                  <li>
-                    <a href="#">Separated link</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                  <li>
-                    <a href="#">One more separated link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-          </div>
-          <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.container -->
       </nav>
     </header>
     <div class="gradient-bg">
@@ -114,7 +100,7 @@
           <div class="banners">
             <div class="container">
               <div class="row">
-                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <div class="carousel-wrapper col-xs-12 col-sm-8 col-md-8 col-lg-8">
                   <div class="banner-item">
                     <div id="myCarousel" class="carousel slide slider" data-ride="carousel">
                       <div class="carousel-inner">
@@ -122,9 +108,7 @@
                           <span class="banner-category">Новости</span>
                           <span class="banner-date">28.11.2017</span>
                           <div class="banner-info">
-                            <h3 class="banner-title">Компания «Сожам»
-                              <br> на выставке
-                              <br>«ЮГАГРО 2017»</h3>
+                            <h3 class="banner-title">Компания «Сожам» на выставке «ЮГАГРО 2017»</h3>
                             <a href="#" class="btn btn-sojam" role="button">Подробнее
                               <span class="info-arrow__right">
                                 <i class="fas fa-chevron-circle-right"></i>
@@ -136,9 +120,7 @@
                           <span class="banner-category">Новости</span>
                           <span class="banner-date">30.11.2017</span>
                           <div class="banner-info">
-                            <h3 class="banner-title">Компания «Сожам»
-                              <br> на выставке
-                              <br>«ЮГАГРО 2017»</h3>
+                            <h3 class="banner-title">Компания «Сожам» на выставке «ЮГАГРО 2017»</h3>
                             <a href="#" class="btn btn-sojam" role="button">Подробнее
                               <span class="info-arrow__right">
                                 <i class="fas fa-chevron-circle-right"></i>
@@ -220,11 +202,17 @@
         <div class="section">
           <div class="clients">
             <div class="container">
-              <h2 class="section-title">Наши клиенты</h2>
-              <p class="section-description">Технология защиты зерна на хранении методом холодной небулизации и с использованием инсектицида ПИРИГРЭН 50,
-                Ж успешно внедрена и применяется на российских элеваторах и зернохранилищах.</p>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                  <h2 class="section-title">Наши клиенты</h2>
+                  <p class="section-description">Технология защиты зерна на хранении методом холодной небулизации и с использованием инсектицида ПИРИГРЭН
+                    50, Ж успешно внедрена и применяется на российских элеваторах и зернохранилищах.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                  <div class="map-sojam"></div>
+                </div>
+              </div>
             </div>
-            <div class="map-sojam"></div>
           </div>
         </div>
         <div class="section">
@@ -319,7 +307,8 @@
                   <div class="contacts-item address">
                     <span class="icon icon__footer">
                       <i class="fas fa-map-marker-alt"></i>
-                    </span>350000, г. Краснодар, ул.Красноармейская, 43 офис 507</div>
+                    </span>350000, г. Краснодар,
+                    <br> ул.Красноармейская, 43 офис 507</div>
                 </div>
               </div>
             </div>
@@ -328,10 +317,10 @@
         <div class="footer-bottom">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12 col-sm-6 col-ms-6 col-lg-6">
+              <div class="col-xs-12 col-sm-6 col-ms-8 col-lg-8">
                 <span class="copyright">Copyright © 2017 Groupe Sojam. Tous droits réservés</span>
               </div>
-              <div class="col-xs-12 col-sm-6 col-ms-6 col-lg-6">
+              <div class="col-xs-12 col-sm-6 col-ms-4 col-lg-4 col-md-centered">
                 <span class="dev">Разработка сайта:
                   <span class="txt__red">«Веб Гармония»</span>
                 </span>

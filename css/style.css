@@ -18,6 +18,12 @@ body {
   font-size: 14px;
   color: #424242;
 }
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
 h3 {  
   font-size: 1.286em;
   font-weight: 700;
@@ -145,6 +151,12 @@ h3 {
   margin-bottom: 5px;
   font-weight: 600;
 }
+.nav-item__footer:hover,
+.nav-item__footer:active,
+.nav-item__footer:focus {
+  text-decoration: none;
+  color: #838385;
+}
 .nav-item__footer:before {
   content: "";
   display: inline-block;
@@ -164,7 +176,7 @@ h3 {
 .contacts-item {
   margin-bottom: 5px;
   display: flex;
-  font-weight: 600;
+  font-weight: 700;
 }
 .contacts-item .icon {
   margin-right: 10px;
@@ -191,6 +203,9 @@ h3 {
 .txt__red {
   color: #ab2711;
 }
+.txt__green {
+  color: #4c7b12
+}
 /*main page*/ 
 .main .main-slide {
   background-image: url(../images/grain.jpg);
@@ -198,7 +213,7 @@ h3 {
   height: 285px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center 80%;
   position: relative;
 }
 .main .slide-title {
@@ -316,7 +331,7 @@ h3 {
   background-position: right;
   background-repeat: no-repeat;
   width: 100%;
-  height: 214px;
+  min-height: 214px;
 }
 .main .carousel-control-sojam {
   width: unset;
@@ -372,10 +387,6 @@ h3 {
   padding-top: 55px;
 }
 .main .section-title {
-  font-size: 1.5em;
-  margin-top: 0;
-  margin-bottom: 50px;
-  font-weight: 700;
   position: relative;
   display: inline-block;
 }
