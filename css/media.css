@@ -1,0 +1,116 @@
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.428em;
+  }
+  .navbar-header-sojam {
+    float: unset;
+  }
+  .navbar-collapse.collapse {
+    display: none!important; /*bootstrap rewrite */
+  }
+  .header .navbar-toggle__black {
+    display: block;
+    margin-right: -5px;
+    padding: 20px 0 0;
+  }
+  .navbar-sojam .navbar-header-sojam .brand-logo {
+    margin-left: -5px;
+  }
+  .header-selfservice {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 0.857em;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+  }
+  .header .contacts-item {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+  .header .contacts-item.phone .icon {
+    font-size: 0.857em;
+  }
+  .language-type:after {
+    content: "";
+    border-right: 1px solid #424242;
+    display: inline-block;
+    height: 12px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-left: 3px;
+  }
+  .language-type:last-child:after {
+    border: none;
+    margin-left: 0;
+  }
+  .language-type.active {
+    color: #ab2711;
+  }
+  .language-type:hover {
+    color: #ab2711;
+  }
+  .main .main-slide {
+    height: 380px;
+  }
+  .main .slide-title {
+    width: calc(100% - (157px + 25px));
+  }
+  .main .slide-logo {
+    background-image: url(../images/pirigren.png);
+    margin: 26px 0 28px 24px;
+    width: 283px;
+    height: 64px;
+  }
+  .main .slide-info {
+    width: 157px;
+    left: calc(100% - (157px + 25px));
+    padding-top: 30px;
+  }
+  .main .slide-info .info-item {
+    margin-bottom: 30px;
+  }
+  .main .slide-info .info-number {
+    font-size: 3em;
+    font-weight: 700;
+  }
+  .btn-sojam {
+    font-size: 1em;
+  }
+  .main .information-block {
+    padding-top: 80px;
+    padding-bottom: 45px;
+  }
+  .main .information-block .article-picture {
+    min-height: 130px;
+  }
+  .main .information-block .article-title {
+    font-size: 1.286em;
+    min-height: 46px;
+  }
+  .information-block .article-desc {
+    min-height: 80px;
+  }
+  .brand-logo__footer {
+    width: 172px;
+    height: 40px;
+    background-size: cover;
+    margin-left: 0;
+  }
+  .footer-bottom {
+    background-color: #fff;
+    padding-top: 0;
+  }
+  .footer-bottom .copyright {
+    margin-bottom: 0;
+  }
+  .footer-bottom .dev {
+    float: right;
+  }
+  .soc-icons {
+    margin-bottom: 0;
+    justify-content: start;
+  }
+}
