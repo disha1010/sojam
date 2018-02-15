@@ -128,7 +128,7 @@
   .col-md-centered {
     text-align: center;
   }
-  h2 {
+  h1 {
     font-size: 2.143em;
   }
   .navbar-form-sojam {
@@ -156,13 +156,22 @@
     color: #4c7b12;
     vertical-align: middle;
   }
+  .navbar-nav-sojam {
+    margin-top: 25px;
+  } 
   .navbar-nav-sojam>.navbar-nav-item>a {
     background: none;
-    padding-top: 25px;
+    padding-top: 0;
     padding-bottom: 0;
     color: #424242;
     font-size: 1em;
     font-weight: 600;
+  }
+  .navbar-nav-sojam>.navbar-nav-item>a.active {
+    color: #ab2711;
+  }
+  .navbar-nav-sojam>.navbar-nav-item>a.txt__green {
+    color: #4c7b12;
   }
   .navbar-nav-sojam>.navbar-nav-item:last-child>a {
     padding-right: 10px;
@@ -208,7 +217,7 @@
     padding-top: 90px;
     padding-bottom: 65px;
   }
-  .slider__sojam, 
+  .slider-bg, 
   .main .banner-item {
     min-height: 350px;
   }
@@ -224,7 +233,7 @@
     top: 12px;
     left: 12px;
   }
-  .banner-date {
+  .date {
     top: 12px;
     right: 12px;
   }

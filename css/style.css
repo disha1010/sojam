@@ -18,7 +18,7 @@ body {
   font-size: 14px;
   color: #424242;
 }
-h2 {
+h1 {
   font-size: 1.5em;
   margin-top: 0;
   margin-bottom: 50px;
@@ -259,11 +259,11 @@ h3 {
 }
 
 /* banners on main page */
-.main .banners {
+.banners {
   padding-bottom: 40px;
   padding-top: 60px;
 }
-.main .banner-item {
+.banner-item {
   margin-bottom: 30px;
   position: relative;
   background-size: cover;
@@ -274,18 +274,18 @@ h3 {
   box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
   -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
 }
-.main .banner-bg__cold-nebula-metod {
+.banner-bg__cold-nebula-metod {
   background-image: url(../images/cold-nebula-metod.jpg);
 }
-.main .banner-bg__about-company {  
+.banner-bg__about-company {  
   background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../images/about-company.jpg);
   background-size: cover;
   background-position: right;
 }
-.main .banner-bg__cold-nebula-system {
+.banner-bg__cold-nebula-system {
   background-image: url(../images/cold-nebula-system.PNG);
 }
-.main .banner-bg__grain-quality {
+.banner-bg__grain-quality {
   background-image: url(../images/grain-quality.jpg);
 }
 .banner-category {
@@ -301,7 +301,7 @@ h3 {
   font-weight: 600;
   padding: 6px 10px;
 }
-.banner-date {
+.date {
   background-color: #7fb045;
   display: inline-block;
   position: absolute;
@@ -325,7 +325,7 @@ h3 {
   color: #fff;
 }
 /* slider */
-.slider__sojam {
+.slider-bg {
   background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../images/sojam-office.jpg);
   background-size: cover;
   background-position: right;
@@ -333,7 +333,7 @@ h3 {
   width: 100%;
   min-height: 214px;
 }
-.main .carousel-control-sojam {
+.carousel-control-sojam {
   width: unset;
   opacity: 1;
   bottom: 22px;
@@ -341,18 +341,18 @@ h3 {
   font-size: 1.428em;
   line-height: 1;
 }
-.main .carousel-control-sojam:hover {
+.carousel-control-sojam:hover {
   font-size: calc(1.428em + 10%);
   bottom: 20px;
 }
-.main .carousel-control-sojam.right {
+.carousel-control-sojam.right {
   background-image: none;
   right: 20px;
 }
 @keyframes spinner {
   to {transform: rotate(360deg);}
 }
-.main .carousel-control-sojam.right:before {
+.carousel-control-sojam.right:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -367,13 +367,13 @@ h3 {
   border-top-color: #fff;
   animation: spinner .8s ease infinite;
 }
-.main .carousel-control-sojam.right:hover:before {
+.carousel-control-sojam.right:hover:before {
   width: 27px;
   height: 26px;
   margin-top: -14px;
   margin-left: -13px;
 }
-.main .carousel-control-sojam.left {
+.carousel-control-sojam.left {
   background-image: none;
   right: 50px;
   left: unset;
@@ -386,7 +386,7 @@ h3 {
   font-weight: 700;
   padding-top: 55px;
 }
-.main .section-title {
+.section-title {
   position: relative;
   display: inline-block;
 }
@@ -422,8 +422,9 @@ h3 {
   min-height: 170px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
-.main .information-block .article-txt {
+.article-txt {
   padding: 25px 20px;
 }
 .information-block .article-picture__documentation {
@@ -435,12 +436,101 @@ h3 {
 .information-block .article-picture__booklet {
   background-image: url(../images/catalogue.png);
 }
-.information-block .article-title {
+.article-title {
   color: #4c7b12;
   margin-bottom: 20px;
 }
-.information-block .article-desc {
+.article-desc {
   color: #424242;
   margin-bottom: 25px;
   font-size: 1em;
+}
+
+/* mews page */
+.breadcrumbs {
+  background-color: #f9f9ff;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: right;
+}
+.breadcrumbs-item {
+  font-size: 0.928em;
+  color: #acb8c1
+}
+.breadcrumbs-item.active {
+  color: #4c7b12;
+}
+.breadcrumbs-item:after {
+  content: "";
+  border-right: 1px solid #acb8c1;
+  display: inline-block;
+  height: 12px;
+  vertical-align: middle;
+  margin-bottom: 0;
+  margin-left: 3px;
+}
+.breadcrumbs-item:last-child:after {
+  border: none;
+}
+.news .section {
+  padding-top: 40px;
+  padding-bottom: 65px;
+}
+.news .section-title {
+  margin-bottom: 40px;
+  text-align: center;
+  display: block;
+}
+.news .article {
+  background-color: #fff;
+}
+.news .slider {
+  box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+  -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+}
+.news .carousel-control-sojam {
+  color: #424242;
+}
+.news .article-txt {
+  padding-top: 10px;
+} 
+.news .slider .article-title {
+  margin-top: 20px;
+  color: #424242;
+}
+.news .slider .date {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.date-wrapper {
+  text-align: right;
+}
+.news .carousel-wrapper {
+  margin-bottom: 30px;
+}
+.publication-wrapper {
+  box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+  -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1); 
+  background-color: #fff;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.publication-title {
+  color: #424242;
+  margin-bottom: 0;
+}
+.nav-navbar-publication {
+  display: none;
+}
+.publication-toggle {
+  background-image: url(../images/publication-icon.png);
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
