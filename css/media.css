@@ -193,6 +193,22 @@
     padding-bottom: 15px;
     margin-bottom: 75px;
   }
+  /* feedback page */
+  .feedback .section-title {
+    text-align: center;
+  }
+  .feedback-author {
+    display: flex;
+  }
+  .feedback-picture-wrapper {
+    margin-left: 0;
+  }
+  .feedback-author-info {
+    width: calc(100% - 130px);
+  }
+  .upload-btn-wrapper {
+    margin-right: 25px;
+  }
 }
 @media screen and (min-width: 992px) {
   .col-md-centered {
