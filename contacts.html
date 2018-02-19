@@ -11,11 +11,11 @@
 	<link rel="stylesheet" href="css/media.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script defer src="js/fontawesome-all.js"></script>
-	<title>Sojam - Новости</title>
+	<title>Sojam - Контакты</title>
 </head>
 
 <body>
-	<div class="contacts">
+	<div class="contacts-page">
 		<header class="header">
 			<nav class="navbar navbar-sojam">
 				<div class="container">
@@ -41,7 +41,7 @@
 							</form>
 						</div>
 						<button type="button" class="navbar-toggle collapsed navbar-toggle__black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-						 aria-expanded="false">
+						  aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="nav-icon">
 								<i class="fas fa-bars"></i>
@@ -90,21 +90,27 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-right">
 								<div class="article">
-									<h3 class="article-title feedback-author-name">Контактная информация</h3>
-									<div class="contacts ocntacts__main">
-										<div class="contacts-item phone">
-											<span class="icon icon__footer">
-												<i class="fas fa-phone"></i>
-											</span>+7 (861) 212-74-57</div>
-										<div class="contacts-item email">
-											<span class="icon icon__footer">
-												<i class="fas fa-envelope"></i>
-											</span>contact@sojam.ru</div>
-										<div class="contacts-item address">
-											<span class="icon icon__footer">
-												<i class="fas fa-map-marker-alt"></i>
-											</span>350000, г. Краснодар,
-											<br> ул.Красноармейская, 43 офис 507</div>
+									<h3 class="article-title">Контактная информация</h3>
+									<div class="contacts__main">
+										<div class="row">
+											<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+												<div class="contacts-item phone">
+													<span class="icon">
+														<i class="fas fa-phone"></i>
+													</span>+7 (861) 212-74-57</div>
+												<div class="contacts-item email">
+													<span class="icon">
+														<i class="fas fa-envelope"></i>
+													</span>contact@sojam.ru</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+												<div class="contacts-item address">
+													<span class="icon">
+														<i class="fas fa-map-marker-alt"></i>
+													</span>350000, г. Краснодар,
+													<br> ул.Красноармейская, 43 офис 507</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -118,31 +124,72 @@
 												<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
 												<strong>Спасибо!</strong> Ваше сообщение отправлено.
 											</div>
-											<div class="form-group">
-												<input type="text" class="form-control form-control-sojam" id="name" placeholder="Ваше имя и фамилия или название..." name="name"
-												 required="true">
-											</div>
-											<div class="feedback-author">
-												<div class="feedback-author-info">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 													<div class="form-group">
-														<input type="text" class="form-control form-control-sojam" id="name" placeholder="Ваше имя и фамилия или название..." name="name"
-														 required="true">
-													</div>
-													<div class="form-group">
-														<input type="text" class="form-control form-control-sojam" id="position" placeholder="Должность" name="position" required="true">
+														<label class="form-label" for="message-theme">Тема сообщения
+															<span class="required-mark">&midast;</span>
+														</label>
+														<select class="form-control" id="message-theme">
+															<option selected>Консультация</option>
+															<option>Консультация 2</option>
+															<option>Консультация 3</option>
+															<option>Консультация 4</option>
+														</select>
 													</div>
 												</div>
 											</div>
-											<div class="form-group">
-												<input type="email" class="form-control form-control-sojam" id="email" placeholder="Email/телефон" name="email" required="true">
-											</div>
-											<div class="form-group textarea">
-												<textarea class="form-control form-control-sojam" rows="5" id="comment" placeholder="Сообщение" required="true"></textarea>
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<div class="form-group">
+														<label class="form-label" for="name">Введите имя
+															<span class="required-mark">&midast;</span>
+														</label>
+														<input type="text" class="form-control form-control-sojam" id="name" placeholder="Ваше имя и фамилия или название..." name="name"
+														  required="true">
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<div class="form-group">
+														<label class="form-label" for="surname">Введите фамилию
+															<span class="required-mark">&midast;</span>
+														</label>
+														<input type="text" class="form-control form-control-sojam" id="" placeholder="Фамилия" name="surname" required="true">
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<div class="form-group">
+														<label class="form-label" for="surname">Телефон
+															<span class="required-mark">&midast;</span>
+														</label>
+														<input type="email" class="form-control form-control-sojam" id="email" placeholder="елефон" name="email" required="true">
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+													<div class="form-group">
+														<label class="form-label" for="email">Email
+															<span class="required-mark">&midast;</span>
+														</label>
+														<input type="number" class="form-control form-control-sojam" id="email" placeholder="Email" name="email" required="true">
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-6 col-md-11 col-lg-11">
+													<div class="form-group textarea">
+														<label class="form-label" for="surname">Сообщение</label>
+														<textarea class="form-control form-control-sojam" rows="5" id="comment" placeholder="Сообщение"></textarea>
+													</div>
+												</div>
 											</div>
 											<div class="form-group capcha">
-												<img src="images/capcha.png" class="capcha-img" alt="">
-												<input type="password" id="password" name="password" class="form-control form-control-sojam" placeholder="Введите код с картинки"
-												 required="true">
+												<div class="row">
+													<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 pull-right">
+														<img src="images/capcha.png" class="capcha-img" alt="">
+													</div>
+													<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+														<input type="password" id="password" name="password" class="form-control form-control-sojam" placeholder="Введите код с картинки"
+														  required="true">
+													</div>
+												</div>
 											</div>
 											<div class="buttons-block">
 												<button type="submit" id="submit" class="btn btn-sojam btn-sojam__green-bg">Отправить

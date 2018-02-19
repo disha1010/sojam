@@ -245,7 +245,8 @@
             </div>
             <div class="feedback-form">
               <h3 class="form-title">Оставить отзыв</h3>
-              <p class="form-txt">Для связи с Михаилом Баженовым заполните форму ниже, оставив свои контактные данные</p>
+              <p class="form-txt">Мы будем вам очень благодарны, если вы оставите отзыв о нашем продукте.
+              </p>
               <form id="contact-form" class="form">
                 <div class="alert alert-success alert-dismissable message">
                   <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
@@ -279,9 +280,15 @@
                   <textarea class="form-control form-control-sojam" rows="5" id="comment" placeholder="Сообщение" required="true"></textarea>
                 </div>
                 <div class="form-group capcha">
-                  <img src="images/capcha.png" class="capcha-img" alt="">
-                  <input type="password" id="password" name="password" class="form-control form-control-sojam" placeholder="Введите код с картинки"
-                    required="true">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-right">
+                      <img src="images/capcha.png" class="capcha-img" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                      <input type="password" id="password" name="password" class="form-control form-control-sojam" placeholder="Введите код с картинки"
+                        required="true">
+                    </div>
+                  </div>
                 </div>
                 <div class="buttons-block">
                   <button type="submit" id="submit" class="btn btn-sojam btn-sojam__green-bg">Отправить

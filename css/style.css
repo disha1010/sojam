@@ -489,13 +489,15 @@ h4 {
 
 /* mews page */
 .news .section,
-.feedback .section {
+.feedback .section,
+.contacts-page .section {
   padding-top: 40px;
   padding-bottom: 65px;
 }
 .news .section-title,
 .faq .section-title,
-.feedback .section-title {
+.feedback .section-title,
+.contacts-page .section-title {
   margin-bottom: 40px;
   text-align: center;
   display: block;
@@ -668,6 +670,9 @@ h4 {
 .feedback-item {
   padding: 25px 20px 30px;
 }
+.feedback .article {
+  margin-bottom: 30px;
+}
 .feedback .article-txt {
   padding: 0;
 }
@@ -695,12 +700,18 @@ h4 {
 .btn-sojam__green-bg {
   border-color: #6db53e;
   background-color: #6db53e;
-  color: #fff;
+  color: #fff;  
+  text-transform: uppercase;
 }
 .feedback .section-title-wrapper .btn-sojam__green-bg {
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 0.857em;
+  padding: 5px 15px 4px;
+}
+.feedback .capcha-img {
+  padding-bottom: 7px;
 }
 /* request-form */
 .feedback-form .block-txt {
@@ -725,6 +736,7 @@ h4 {
 .feedback-form .form-control {
   padding: 25px;
   background: unset;
+  border-radius: 0;
 }
 .feedback-form .textarea .form-control {
   padding-top: 15px;
@@ -780,4 +792,51 @@ h4 {
   height: 133px;
   border-radius: 50%;
   overflow: hidden;
+}
+.feedback-form .btn-sojam__green-bg {
+  padding: 12px 25px 11px;
+  border-radius: 1.607em;
+}
+/* contacts */
+.contacts-page .article-title {
+  padding: 30px 25px;
+  box-shadow: 0px 0px 5.46px 0.54px rgba(242, 242, 242, 1); 
+  -webkit-box-shadow: 0px 0px 5.46px 0.54px rgba(242, 242, 242, 1); 
+  margin-bottom: 0;
+}
+.contacts-page .contacts__main {
+  padding: 35px 25px 10px;
+}
+.contacts-page .contacts-item .icon {
+  color: #6db53e
+}
+.contacts-page .contacts-item {
+  margin-bottom: 25px;
+}
+.contacts-page .contacts-item.phone .icon {
+  font-size: 1.5em;
+}
+.contacts-page .contacts-item.email .icon {
+  font-size: 1.124em;
+}
+.contacts-page .contacts-item.address .icon {
+  font-size: 1.623em;
+}
+.contacts-page .feedback-form {
+  padding: 35px 25px 65px 25px;
+  margin-bottom: 35px;
+}
+.contacts-page .feedback-form .form-txt {
+  text-align: left;
+}
+.contacts-page .feedback-form .form-group {
+  text-align: left;
+}
+.contacts-page .feedback-form .form-group.capcha {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.contacts-page .feedback-form .form-label {
+  font-size: 0.928em;
+  color: #4c7b12;
 }
