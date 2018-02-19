@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-my.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer src="js/fontawesome-all.js"></script>
+	<title>Sojam - Новости</title>
+</head>
+
+<body>
+	<div class="contacts">
+		<header class="header">
+			<nav class="navbar navbar-sojam">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header navbar-header-sojam">
+						<div class="header-selfservice">
+							<div class="contacts-item phone">
+								<span class="icon icon__footer">
+									<i class="fas fa-phone"></i>
+								</span>+7 (861) 212-74-57</div>
+							<div class="language">
+								<span class="language-type fr">fr</span>
+								<span class="language-type ua">ua</span>
+								<span class="language-type ru active">ru</span>
+							</div>
+							<form class="navbar-form navbar-form-sojam hidden-sm">
+								<div class="form-group">
+									<input type="text" class="form-control form-control-sojam" placeholder="Поиск">
+								</div>
+								<button type="submit" class="btn btn-search">
+									<i class="fas fa-search"></i>
+								</button>
+							</form>
+						</div>
+						<button type="button" class="navbar-toggle collapsed navbar-toggle__black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						 aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="nav-icon">
+								<i class="fas fa-bars"></i>
+							</span>
+						</button>
+						<a class="navbar-brand brand-logo" href="/"></a>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right navbar-nav-sojam">
+								<li class="navbar-nav-item">
+									<a href="/">О компании</a>
+								</li>
+								<li class="navbar-nav-item">
+									<a href="products.html">Продукты</a>
+								</li>
+								<li class="navbar-nav-item">
+									<a href="news.html">Новости</a>
+								</li>
+								<li class="navbar-nav-item">
+									<a href="faq.html">FAQ</a>
+								</li>
+								<li class="navbar-nav-item">
+									<a class="active" href="contacts.html">Контакты</a>
+								</li>
+								<li class="navbar-nav-item">
+									<a class="txt__green" href="#">Связаться с нами</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /.container -->
+			</nav>
+		</header>
+		<div class="breadcrumbs">
+			<div class="container">
+				<span class="breadcrumbs-item">Главная</span>
+				<span class="breadcrumbs-item active">Контакты</span>
+			</div>
+		</div>
+		<div class="gradient-bg">
+			<main class="main-content">
+				<div class="section">
+					<div class="container">
+						<h1 class="section-title">Связаться с нами</h1>
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pull-right">
+								<div class="article">
+									<h3 class="article-title feedback-author-name">Контактная информация</h3>
+									<div class="contacts ocntacts__main">
+										<div class="contacts-item phone">
+											<span class="icon icon__footer">
+												<i class="fas fa-phone"></i>
+											</span>+7 (861) 212-74-57</div>
+										<div class="contacts-item email">
+											<span class="icon icon__footer">
+												<i class="fas fa-envelope"></i>
+											</span>contact@sojam.ru</div>
+										<div class="contacts-item address">
+											<span class="icon icon__footer">
+												<i class="fas fa-map-marker-alt"></i>
+											</span>350000, г. Краснодар,
+											<br> ул.Красноармейская, 43 офис 507</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+								<div class="article">
+									<div class="feedback-form">
+										<p class="form-txt">Для связи с нами заполните форму ниже, оставив свои контактные данные
+										</p>
+										<form id="contact-form" class="form">
+											<div class="alert alert-success alert-dismissable message">
+												<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+												<strong>Спасибо!</strong> Ваше сообщение отправлено.
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control form-control-sojam" id="name" placeholder="Ваше имя и фамилия или название..." name="name"
+												 required="true">
+											</div>
+											<div class="feedback-author">
+												<div class="feedback-author-info">
+													<div class="form-group">
+														<input type="text" class="form-control form-control-sojam" id="name" placeholder="Ваше имя и фамилия или название..." name="name"
+														 required="true">
+													</div>
+													<div class="form-group">
+														<input type="text" class="form-control form-control-sojam" id="position" placeholder="Должность" name="position" required="true">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<input type="email" class="form-control form-control-sojam" id="email" placeholder="Email/телефон" name="email" required="true">
+											</div>
+											<div class="form-group textarea">
+												<textarea class="form-control form-control-sojam" rows="5" id="comment" placeholder="Сообщение" required="true"></textarea>
+											</div>
+											<div class="form-group capcha">
+												<img src="images/capcha.png" class="capcha-img" alt="">
+												<input type="password" id="password" name="password" class="form-control form-control-sojam" placeholder="Введите код с картинки"
+												 required="true">
+											</div>
+											<div class="buttons-block">
+												<button type="submit" id="submit" class="btn btn-sojam btn-sojam__green-bg">Отправить
+													<span class="info-arrow__right">
+														<i class="fas fa-chevron-circle-right"></i>
+													</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<div class="brand-logo brand-logo__footer"></div>
+								<div class="soc-icons">
+									<a href="#" class="soc-icons-item">
+										<i class="fab fa-twitter"></i>
+									</a>
+									<a href="#" class="soc-icons-item">
+										<i class="fab fa-vk"></i>
+									</a>
+									<a href="#" class="soc-icons-item">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+									<a href="#" class="soc-icons-item">
+										<i class="fab fa-youtube"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<div class="nav nav__footer">
+									<a href="#" class="nav-item__footer">О компании</a>
+									<a href="#" class="nav-item__footer">Продукты</a>
+									<a href="#" class="nav-item__footer">Связаться с нами</a>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<div class="contacts contacts__footer">
+									<div class="contacts-item phone">
+										<span class="icon icon__footer">
+											<i class="fas fa-phone"></i>
+										</span>+7 (861) 212-74-57</div>
+									<div class="contacts-item email">
+										<span class="icon icon__footer">
+											<i class="fas fa-envelope"></i>
+										</span>contact@sojam.ru</div>
+									<div class="contacts-item address">
+										<span class="icon icon__footer">
+											<i class="fas fa-map-marker-alt"></i>
+										</span>350000, г. Краснодар,
+										<br> ул.Красноармейская, 43 офис 507</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+								<span class="copyright">Copyright © 2017 Groupe Sojam. Tous droits réservés</span>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-md-centered">
+								<span class="dev">Разработка сайта:
+									<span class="txt__red">«Веб Гармония»</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
