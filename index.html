@@ -43,16 +43,18 @@
             <button type="button" class="navbar-toggle collapsed navbar-toggle__black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
               aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
-              <span class="nav-icon">
-                <i class="fas fa-bars"></i>
-              </span>
+              <div class="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
             <a class="navbar-brand brand-logo" href="/"></a>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav-wrapper hidden-xs hidden-sm">
               <ul class="nav navbar-nav navbar-right navbar-nav-sojam">
                 <li class="navbar-nav-item">
-                  <a class="active" href="/">О компании</a>
+                  <a class="active" href="index.html">О компании</a>
                 </li>
                 <li class="navbar-nav-item">
                   <a href="products.html">Продукты</a>
@@ -76,6 +78,52 @@
         <!-- /.container -->
       </nav>
     </header>
+
+    <div class="collapse navbar-collapse-sojam gradient-bg__half hidden-md hidden-lg" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav-sojam">
+        <li class="navbar-nav-item hidden-sm">
+          <div class="language">
+            <span class="language-type fr">fr</span>
+            <span class="language-type ua">ua</span>
+            <span class="language-type ru active">ru</span>
+          </div>
+        </li>
+        <li class="navbar-nav-item">
+          <form class="navbar-form navbar-form-sojam hidden-sm">
+            <div class="form-group form-group-sojam">
+              <input type="text" class="form-control form-control-sojam" placeholder="Поиск">
+            </div>
+            <button type="submit" class="btn btn-search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </li>
+        <li class="navbar-nav-item">
+          <a class="active" href="index.html">О компании</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a href="products.html">Продукты</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a href="news.html">Новости</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a href="faq.html">FAQ</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a href="contacts.html">Контакты</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a class="txt__green" href="#">Связаться с нами</a>
+        </li>
+        <li class="navbar-nav-item hidden-sm">
+          <div class="contacts-item phone">
+            <span class="icon icon__footer">
+              <i class="fas fa-phone"></i>
+            </span>+7 (861) 212-74-57</div>
+        </li>
+      </ul>
+    </div>
     <div class="gradient-bg">
       <main class="main-content">
         <div class="main-slide">
@@ -333,6 +381,7 @@
   </div>
 
   <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

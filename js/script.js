@@ -1,17 +1,26 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // accordion
   function close_accordion() {
     $('.accordion-toggle').removeClass('active');
     $('.faq-answer').slideUp(300).removeClass('open');
   }
-  $('.accordion-toggle').click(function(e) {
+  $('.accordion-toggle').click(function (e) {
     e.preventDefault();
-    if($(this).is('.active')) {
+    if ($(this).is('.active')) {
       close_accordion();
     } else {
       close_accordion();
       $(this).addClass('active');
-      $(this).parents('.faq-item').find('.faq-answer').slideDown(300).addClass('open');
+      $(this)
+        .parents('.faq-item')
+        .find('.faq-answer')
+        .slideDown(300)
+        .addClass('open');
     }
+  });
+  // top-menu
+  $('.navbar-toggle').on('click', function () {
+    // $('.navbar-collapse-sojam').toggleClass('in');
+    $(this).find(".nav-icon").toggleClass('open');
   });
 });

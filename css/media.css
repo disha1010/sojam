@@ -38,25 +38,6 @@
   .header .contacts-item.phone .icon {
     font-size: 0.857em;
   }
-  .language-type:after {
-    content: "";
-    border-right: 1px solid #424242;
-    display: inline-block;
-    height: 12px;
-    vertical-align: middle;
-    margin-bottom: 3px;
-    margin-left: 3px;
-  }
-  .language-type:last-child:after {
-    border: none;
-    margin-left: 0;
-  }
-  .language-type.active {
-    color: #ab2711;
-  }
-  .language-type:hover {
-    color: #ab2711;
-  }
   .main .main-slide {
     height: 380px;
   }
@@ -247,48 +228,10 @@
   h4 {
     font-size: 1.857em;
   }
-  .navbar-form-sojam {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-  }
-  input.form-control-sojam::placeholder,
-  input.form-control-sojam::-webkit-input-placeholder {
-    color: #424242;
-  }
-  .navbar-form-sojam .form-control-sojam {
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    width: 4em;
-    height: 1em;
-    font-size: 1em;
-  }
-  .btn-search {
-    border: none;
-    background: none;
-    padding: 0;
-    font-size: 1em;
-    color: #4c7b12;
-    vertical-align: middle;
-  }
   .navbar-nav-sojam {
     margin-top: 25px;
   } 
-  .navbar-nav-sojam>.navbar-nav-item>a {
-    background: none;
-    padding-top: 0;
-    padding-bottom: 0;
-    color: #424242;
-    font-size: 1em;
-    font-weight: 600;
-  }
-  .navbar-nav-sojam>.navbar-nav-item>a.active {
-    color: #ab2711;
-  }
-  .navbar-nav-sojam>.navbar-nav-item>a.txt__green {
-    color: #4c7b12;
-  }
+
   .navbar-nav-sojam>.navbar-nav-item:last-child>a {
     padding-right: 10px;
   }
