@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-my.css">
+	<link rel="stylesheet" href="css/bootstrap_my.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script defer src="js/fontawesome-all.js"></script>
   <title>Sojam - Россия</title>
 </head>
 
@@ -49,7 +47,7 @@
                 <span></span>
               </div>
             </button>
-            <a class="navbar-brand brand-logo" href="/"></a>
+            <a class="navbar-brand brand-logo" href="index.html"></a>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="nav-wrapper hidden-xs hidden-sm">
               <ul class="nav navbar-nav navbar-right navbar-nav-sojam">
@@ -57,7 +55,7 @@
                   <a class="active" href="index.html">О компании</a>
                 </li>
                 <li class="navbar-nav-item">
-                  <a href="products.html">Продукты</a>
+                  <a href="#">Продукты</a>
                 </li>
                 <li class="navbar-nav-item">
                   <a href="news.html">Новости</a>
@@ -79,9 +77,9 @@
       </nav>
     </header>
 
-    <div class="collapse navbar-collapse-sojam gradient-bg__half hidden-md hidden-lg" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav-sojam">
-        <li class="navbar-nav-item hidden-sm">
+    <div class="collapse navbar-collapse-sojam hidden-md hidden-lg" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav-sojam gradient-bg__half">
+        <li class="navbar-nav-item">
           <div class="language">
             <span class="language-type fr">fr</span>
             <span class="language-type ua">ua</span>
@@ -89,7 +87,7 @@
           </div>
         </li>
         <li class="navbar-nav-item">
-          <form class="navbar-form navbar-form-sojam hidden-sm">
+          <form class="navbar-form navbar-form-sojam">
             <div class="form-group form-group-sojam">
               <input type="text" class="form-control form-control-sojam" placeholder="Поиск">
             </div>
@@ -102,7 +100,7 @@
           <a class="active" href="index.html">О компании</a>
         </li>
         <li class="navbar-nav-item">
-          <a href="products.html">Продукты</a>
+          <a href="#">Продукты</a>
         </li>
         <li class="navbar-nav-item">
           <a href="news.html">Новости</a>
@@ -116,7 +114,7 @@
         <li class="navbar-nav-item">
           <a class="txt__green" href="#">Связаться с нами</a>
         </li>
-        <li class="navbar-nav-item hidden-sm">
+        <li class="navbar-nav-item">
           <div class="contacts-item phone">
             <span class="icon icon__footer">
               <i class="fas fa-phone"></i>
@@ -252,12 +250,14 @@
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                  <h1 class="section-title">Наши клиенты</h1>
-                  <p class="section-description">Технология защиты зерна на хранении методом холодной небулизации и с использованием инсектицида ПИРИГРЭН
-                    50, Ж успешно внедрена и применяется на российских элеваторах и зернохранилищах.</p>
+                  <div class="article">
+                    <h1 class="section-title">Наши клиенты</h1>
+                    <p class="section-description">Технология защиты зерна на хранении методом холодной небулизации и с использованием инсектицида ПИРИГРЭН
+                      50, Ж успешно внедрена и применяется на российских элеваторах и зернохранилищах.</p>
+                  </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                  <div class="map-sojam"></div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 right-md center-sm">
+                  <div id="map" class="map-sojam"></div>
                 </div>
               </div>
             </div>
@@ -379,8 +379,13 @@
       </footer>
     </div>
   </div>
-
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="js/fontawesome-all.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX0boY068oiX8WVrBpxKLbr-SJt4pzUZ8&callback=initMap" async
+    defer>
+  </script>
   <script src="js/script.js"></script>
 </body>
 
