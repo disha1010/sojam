@@ -20,8 +20,8 @@ $(document).ready(function () {
   });
   // top-menu
   $('.navbar-toggle').on('click', function () {
-    // $('.navbar-collapse-sojam').toggleClass('in');
-    $(this).find(".nav-icon").toggleClass('open');
+    $(this).find('.nav-icon').toggleClass('open');
+    $('.navbar-collapse-sojam').animate({width: 'toggle'});
   });
 });
 // map

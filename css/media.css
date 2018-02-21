@@ -1,6 +1,9 @@
 @media screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+  }
   h3 {
-    font-size: 1.428em;
+    font-size: 1.286em;
   }
   h4 {
     font-size: 1.286em;
@@ -24,6 +27,12 @@
     margin-right: 10px;
     padding: 20px 0 0;
   }
+  .navbar-nav-sojam>.navbar-nav-item>a, 
+  input.form-control-sojam::placeholder,
+  input.form-control-sojam::-webkit-input-placeholder,
+  .navbar-form-sojam .form-control-sojam {
+    font-size: 1.143em;
+  } 
   .navbar-sojam .navbar-header-sojam .brand-logo {
     margin-left: -5px;
   }
@@ -64,16 +73,21 @@
   }
   .main .slide-info .info-item {
     margin-bottom: 30px;
+    font-weight: 700;
   }
   .main .slide-info .info-number {
     font-size: 3em;
-    font-weight: 700;
-  }
+    line-height: 0.825;
+  }  
   .btn-sojam {
     font-size: 0.928em;
   }
   .btn-sojam__white {
-    font-size: 1em;
+    font-size: 1em;    
+    padding: 6px 13px 6px;
+  }
+  .main .section-description {
+    margin-bottom: 40px;
   }
   .main .information-block {
     padding-top: 80px;
@@ -83,7 +97,6 @@
     min-height: 130px;
   }
   .main .information-block .article-title {
-    font-size: 1.286em;
     min-height: 46px;
   }
   .information-block .article-desc {
@@ -131,12 +144,12 @@
     margin: 0;
   }
   /* news page */
-  .news .section,
-  .faq .section {
+  .news .section {
     padding-top: 50px;
+    padding-bottom: 60px;
   }
   .news .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
   .news .carousel-wrapper {
     margin-bottom: 35px;
@@ -158,6 +171,17 @@
   }
   .nav-navbar-filter {
     display: block;
+  }  
+  .news .slider .date {
+    right: -5px;
+  }
+  .carousel-control-sojam.left {
+    right: 60px;
+    bottom: 25px;
+  }
+  .carousel-control-sojam.right {
+    right: 25px;
+    bottom: 25px;
   }
   .filter-toggle {
     display: none;
@@ -186,8 +210,12 @@
   }
   .publication-more {
     font-size: 1.071em;
+    margin-top: -5px;
   }
   /* faq */
+  .faq .section {
+    padding-top: 50px;
+  }
   .faq .article-txt {
     padding: 20px 0 0;
     margin-right: 35px;
@@ -248,13 +276,25 @@
   h1 {
     font-size: 2.143em;
   }
+  h2 {
+    font-size: 2em;
+  }
   h4 {
     font-size: 1.857em;
   }
   .navbar-nav-sojam {
     margin-top: 25px;
   } 
-
+  .navbar-nav-sojam>.navbar-nav-item>a, 
+  input.form-control-sojam::placeholder,
+  input.form-control-sojam::-webkit-input-placeholder,
+  .navbar-form-sojam .form-control-sojam {
+    font-size: 1em;
+    font-weight: 600;
+  } 
+  .navbar-form-sojam {
+    padding-bottom: 0;
+  }
   .navbar-nav-sojam>.navbar-nav-item:last-child>a {
     padding-right: 10px;
   }
@@ -288,8 +328,11 @@
   .main .slide-info .info-item {
     font-size: 1.299em;
   }
+  .main .slide-info .btn-sojam__white {
+    margin-top: 10px;
+  }
   .main .slide-info .info-number {
-    font-size: 3.898em;
+    font-size: 3em;
   }
   .btn-sojam__white {
     padding: 11px 23px 11px;
@@ -305,7 +348,6 @@
   }
   .banner-title {
     min-height: 70px;
-    font-size: 2em;
     margin-bottom: 20px;
   }
   .slider .banner-title {
@@ -314,6 +356,9 @@
   .banner-category {
     top: 12px;
     left: 12px;
+  }
+  .main .date {
+    background-color: #4c7b12;
   }
   .date {
     top: 12px;
@@ -349,11 +394,14 @@
   .main .clients .map-sojam {
     height: 439px;
   }
+  .main .clients {
+    margin-bottom: 0;
+  }
   .main .section-description {
     font-size: 1.143em;
   }
   .main .information-block .article-picture {
-    min-height: 222px;
+    min-height: 220px;
   }
   .main .information-block .article-txt {
     padding-left: 35px;
@@ -361,6 +409,14 @@
   .main .information-block .article-title,
   .information-block .article-desc {
     min-height: unset;
+  }
+  .main .section-title:before {
+    content: url(../images/sojam-red-desk.png);
+    top: -20px;
+  }
+  .main .section-title:after {
+    content: url(../images/sojam-green-desk.png);
+    bottom: -20px;
   }
   .nav-item__footer:before {
     width: 0.5em;
@@ -400,6 +456,9 @@
     display: block!important;
   }
   /* news page */
+  .news .section {
+    padding-bottom: 95px;
+  }
   .news .section-title {
     margin-bottom: 35px;
   }
@@ -408,6 +467,15 @@
   }
   .filter-title {
     font-size: 1.286em;
+  }
+  .news .carousel-wrapper {
+    margin-bottom: 50px;
+  }
+  .publication-filter {
+    padding: 20px 30px;
+  }
+  .news .article-picture {
+    height: 220px;
   }
   /* faq */
   .faq .article-txt {
@@ -445,7 +513,7 @@
   }
   /* partners page */
   .partners .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
   .partners .section {
     padding-top: 55px; 

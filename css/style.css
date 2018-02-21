@@ -24,6 +24,11 @@ h1 {
   margin-bottom: 50px;
   font-weight: 700;
 }
+h2 {
+  font-size: 1.286em;
+  font-weight: 700;
+  margin-top: 0;
+}
 h3 {  
   font-size: 1.286em;
   font-weight: 700;
@@ -39,7 +44,12 @@ h4 {
 }
 .header {
   padding: 15px 15px 17px;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 9;
+  box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1);
+  -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1);
 }
 .header .navbar-sojam {
   margin-bottom: 0;
@@ -120,11 +130,16 @@ h4 {
   width: 170px;
   height: 48px;
 }
+.main-content {
+  padding-top: 80px; 
+}
 .breadcrumbs {
   background-color: #f9f9ff;
   padding-bottom: 15px;
   padding-top: 15px;
-  text-align: right;
+  text-align: right;    
+  box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1);
+  -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1);
 }
 .active.arrow__down {
   transform: rotate(-90deg);
@@ -179,7 +194,7 @@ h4 {
   background-color: #fff;
   color: #ab2711;
   font-size: 0.857em;
-  padding: 3px 8px 4px;
+  padding: 4px 8px 4px;
   box-shadow: 0px 0px 16px 0px rgba(31, 36, 44, 0.33); 
   -webkit-box-shadow: 0px 0px 16px 0px rgba(31, 36, 44, 0.33); 
 }
@@ -194,7 +209,7 @@ h4 {
   background-color: #fff;
   color: #4c7b12;
   border-color: #4c7b12;
-  padding: 4px 15px 5px;
+  padding: 4px 14px 4px;
 }
 .btn-sojam__green:hover {  
   background-color: #4c7b12;
@@ -308,14 +323,14 @@ h4 {
 }
 /* menu */
 .navbar-collapse-sojam {
-  position: absolute;
   top: 80px;
   right: 0;
   z-index: 9;
   overflow-x: hidden;
-  height: 100%;
+  height: 100% !important;
   width: 100%;
   background-color: rgba(66, 66, 66, 0.3);
+  position: fixed;
 }
 .navbar-collapse-sojam .navbar-nav-sojam {
   padding: 20px 0;
@@ -367,6 +382,7 @@ h4 {
 .navbar-form-sojam .form-group-sojam {
   display: inline-block;
   margin-bottom: 0;
+  vertical-align: middle;
 }
 input.form-control-sojam::placeholder,
 input.form-control-sojam::-webkit-input-placeholder {
@@ -404,6 +420,7 @@ input.form-control-sojam::-webkit-input-placeholder {
 }
 .navbar-nav-sojam>.navbar-nav-item>a:hover {  
   background-color: #f2f4f9;
+  color: #ab2711;
 }
 .navbar-nav-sojam>.navbar-nav-item>a.active {
   color: #ab2711;
@@ -496,7 +513,7 @@ input.form-control-sojam::-webkit-input-placeholder {
   background-image: url(../images/cold-nebula-metod.jpg);
 }
 .banner-bg__about-company {  
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../images/about-company.jpg);
+  background: linear-gradient(rgba(81, 81, 81,0.1), rgba(81, 81, 81,0.1)), url(../images/about-company.jpg);
   background-size: cover;
   background-position: right;
 }
@@ -504,7 +521,7 @@ input.form-control-sojam::-webkit-input-placeholder {
   background-image: url(../images/cold-nebula-system.PNG);
 }
 .banner-bg__grain-quality {
-  background-image: url(../images/grain-quality.jpg);
+  background-image:  url(../images/grain-quality.jpg);
 }
 .banner-category {
   background-color: #7fb045;
@@ -602,7 +619,7 @@ input.form-control-sojam::-webkit-input-placeholder {
   text-align: center;
   color: #424242;
   font-weight: 700;
-  padding-top: 55px;
+  padding-top: 65px;
 }
 .main .clients .article {
   background: none;
@@ -671,7 +688,7 @@ input.form-control-sojam::-webkit-input-placeholder {
   font-size: 1em;
 }
 
-/* mews page */
+/* news page */
 .news .section,
 .feedback .section,
 .contacts-page .section {
@@ -698,7 +715,18 @@ input.form-control-sojam::-webkit-input-placeholder {
   min-height: 160px;
 }
 .news .carousel-control-sojam {
-  color: #424242;
+  color: #5c5d5f;
+  border-radius: 50%;
+  border: 1px solid #acacac;
+  padding: 4px 9px;
+}
+.carousel-control-sojam.left {
+  right: 60px;
+  bottom: 25px;
+}
+.carousel-control-sojam.right {
+  right: 20px;
+  bottom: 25px;
 }
 .news .slider .article-txt {
   padding-top: 10px;
