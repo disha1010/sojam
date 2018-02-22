@@ -51,7 +51,12 @@ function initMap() {
       lng: 403.3030532836914
     },
     zoom: 5,
-    disableDefaultUI: true,
+    zoomControl: true,
+    mapTypeControl: false,
+    scaleControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    fullscreenControl: false,
     styles: [{
       "featureType": "landscape",
       "elementType": "geometry.fill",
@@ -120,7 +125,7 @@ function setMarkers(map) {
   var image = {
     url: 'images/map-marker.png',
     // This marker is 20 pixels wide by 32 pixels high.
-    size: new google.maps.Size(27, 35),
+    size: new google.maps.Size(30, 38),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(14, 35),
     labelOrigin: new google.maps.Point(14, 40)

@@ -447,11 +447,15 @@ input.form-control-sojam::-webkit-input-placeholder {
   background-position: center 80%;
   position: relative;
 }
+.main .main-slide .container-sojam {
+  position: relative;
+  height: 100%;
+}
 .main .slide-title {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: calc(100% - (130px + 15px));
+  width: calc(100% - (130px));
   background-color: #c52c13;
 }
 .main .slide-logo {
@@ -469,7 +473,7 @@ input.form-control-sojam::-webkit-input-placeholder {
   color: #fff;
   width: 130px;
   top: 0;
-  left: calc(100% - (130px + 15px));
+  left: calc(100% - (130px));
   text-align: center;
   padding:  10px 6px 19px 6px;
 }
@@ -596,8 +600,8 @@ input.form-control-sojam::-webkit-input-placeholder {
   color: #424242;
   border-radius: 50%;
   background-color: #fff;
-  padding: 4px 9px;
-  font-size: 
+  padding: 4px 8px;
+  font-size: 0.928em;
 }
 .carousel-control-sojam.left {
   right: 60px;
@@ -638,9 +642,6 @@ input.form-control-sojam::-webkit-input-placeholder {
 .main .section-description {
   font-size: 1em;
   margin-bottom: 35px
-}
-.main .date {
-  background-color: #7fb045;
 }
 .main .information-block {
   padding-bottom: 35px;

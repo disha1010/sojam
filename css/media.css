@@ -58,7 +58,7 @@
     height: 380px;
   }
   .main .slide-title {
-    width: calc(100% - (157px + 25px));
+    width: calc(100% - (157px));
   }
   .main .slide-logo {
     background-image: url(../images/pirigren.png);
@@ -68,7 +68,7 @@
   }
   .main .slide-info {
     width: 157px;
-    left: calc(100% - (157px + 25px));
+    left: calc(100% - (157px));
     padding-top: 30px;
   }
   .main .slide-info .info-item {
@@ -313,7 +313,7 @@
     height: 470px;
   }
   .main .slide-title {
-    width: calc(100% - (270px + 105px));
+    width: calc(100% - (270px));
   }
   .main .slide-logo {
     background-image: url(../images/pirigren.png);
@@ -323,7 +323,7 @@
   }
   .main .slide-info {
     width: 270px;
-    left: calc(100% - (270px + 105px));
+    left: calc(100% - (270px));
   }
   .main .slide-info .info-item {
     font-size: 1.299em;
@@ -375,13 +375,11 @@
     padding: 0;
   }
   .main .clients .right-md {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    top: unset;
+    right: unset;
     bottom: unset;
     left: unset;
-    padding-right: 0;
-    padding-left: 30px;
   }
   .main .clients .article {
     text-align: left;
