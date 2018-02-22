@@ -21,7 +21,25 @@ $(document).ready(function () {
   // top-menu
   $('.navbar-toggle').on('click', function () {
     $(this).find('.nav-icon').toggleClass('open');
-    $('.navbar-collapse-sojam').animate({width: 'toggle'});
+    $('.navbar-collapse-sojam').animate({ width: 'toggle' });
+  });
+
+
+  // slider nav animate
+  var progressBarOptions = {
+    startAngle: -1.55,
+    size: 25,
+      value: 1,
+      fill: {
+      color: '#fff'
+    }
+  }
+  
+  $('.main .carousel-control-sojam.right').circleProgress(progressBarOptions).on('circle-animation-progress', function(event, progress, stepValue) {});
+  
+  $('.main .carousel-control-sojam').click(function() {
+      $('.main .carousel-control-sojam.right').circleProgress(progressBarOptions).on('circle-animation-progress', function(event, progress, stepValue) {
+    });
   });
 });
 // map
@@ -35,61 +53,62 @@ function initMap() {
     zoom: 5,
     disableDefaultUI: true,
     styles: [{
-        "featureType": "landscape",
-        "elementType": "geometry.fill",
-        "stylers": [{
-          "color": "#dde3ed"
-        }]
+      "featureType": "landscape",
+      "elementType": "geometry.fill",
+      "stylers": [{
+        "color": "#dde3ed"
+      }]
+    },
+    {
+      featureType: "administrative.country",
+      elementType: "labels.text.fill",
+      "stylers": [{
+        "color": "#424242"
+      }]
+    },
+    {
+      featureType: "administrative.locality",
+      elementType: "labels.text",
+      "stylers": [{
+        "visibility": "off"
+      }]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "geometry.fill",
+      "stylers": [{
+        "color": "#bbc9db"
+      }]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry.fill",
+      "stylers": [{
+        "color": "#748eb6"
       },
       {
-        featureType: "administrative.country",
-        elementType: "labels.text.fill",
-        "stylers": [{
-          "color": "#424242"
-        }]
-      },
-      {
-        featureType: "administrative.locality",
-        elementType: "labels.text",
-        "stylers": [{
-          "visibility": "off"
-        }]
-      },
-      {
-        "featureType": "poi",
-        "elementType": "geometry.fill",
-        "stylers": [{
-          "color": "#bbc9db"
-        }]
-      },
-      {
-        "featureType": "road",
-        "elementType": "geometry.fill",
-        "stylers": [{
-            "color": "#748eb6"
-          },
-          {
-            "visibility": "on"
-          }
-        ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "geometry.stroke",
-        "stylers": [{
-          "color": "#bbc9db"
-        }]
-      },
-      {
-        "featureType": "water",
-        "stylers": [{
-          "color": "#eaeef4"
-        }]
+        "visibility": "on"
       }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry.stroke",
+      "stylers": [{
+        "color": "#bbc9db"
+      }]
+    },
+    {
+      "featureType": "water",
+      "stylers": [{
+        "color": "#eaeef4"
+      }]
+    }
     ]
   });
   setMarkers(map);
 }
+
 var partners = [
   ['Волгоград', 48.707103, 44.516939, 4],
   ['Ростов-на-Дону', 47.222543, 39.718732, 3],
