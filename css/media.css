@@ -24,7 +24,7 @@
   }
   .header .navbar-toggle__black {
     display: block;
-    margin-right: 10px;
+    margin-right: 0px;
     padding: 20px 0 0;
   }
   .navbar-nav-sojam>.navbar-nav-item>a, 
@@ -39,7 +39,7 @@
   .header-selfservice {
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 0px;
     font-size: 0.857em;
     font-weight: 700;
     text-transform: uppercase;
@@ -131,6 +131,9 @@
     position: relative;
     margin-bottom: 340px
   }
+  .main .clients .article {
+    margin-bottom: 65px;
+  }
   .main .clients .center-sm {
     position: absolute;
     bottom: -340px;
@@ -190,17 +193,6 @@
     list-style: none;
     display: flex;
     margin-bottom: 0;
-  }
-  .filter-theme-title a {
-    font-size: 0.928em;
-    color: #898989;
-    text-transform: uppercase;
-    margin-right: 30px;
-  }
-  .filter-theme-title a:hover,
-  .filter-theme-title a:active,
-  .filter-theme-title a:focus {
-    text-decoration: none;
   }
   .filter-theme-title:last-child a {
     margin-right: 0;
@@ -296,7 +288,7 @@
     padding-bottom: 0;
   }
   .navbar-nav-sojam>.navbar-nav-item:last-child>a {
-    padding-right: 10px;
+    padding-right: 0px;
   }
   .navbar-nav-sojam>.navbar-nav-item>a:hover,
   .navbar-nav-sojam>.navbar-nav-item>a:focus,
@@ -309,6 +301,9 @@
   .header .language {
     margin-right: 40px;
   } 
+  .header-selfservice {
+    right: -15px;
+  }
   .main .main-slide {
     height: 470px;
   }

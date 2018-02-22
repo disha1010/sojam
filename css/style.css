@@ -590,6 +590,9 @@ input.form-control-sojam::-webkit-input-placeholder {
 }
 .carousel-control-sojam.right canvas {
   position: absolute;
+  bottom: -3px;
+  right: -3px;
+
 }
 .carousel-control-sojam.left {
   background-image: none;
@@ -600,8 +603,12 @@ input.form-control-sojam::-webkit-input-placeholder {
   color: #424242;
   border-radius: 50%;
   background-color: #fff;
-  padding: 4px 8px;
-  font-size: 0.928em;
+  padding: 3.5px 7px 3.5px 6.5px;
+  font-size: 13px;
+}
+.main .carousel-control-sojam:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .carousel-control-sojam.left {
   right: 60px;
@@ -622,6 +629,7 @@ input.form-control-sojam::-webkit-input-placeholder {
 .main .clients .article {
   background: none;
   box-shadow: none;
+  margin-bottom: 45px;
 }
 .section-title {
   position: relative;
@@ -750,6 +758,7 @@ input.form-control-sojam::-webkit-input-placeholder {
   align-items: center;
   padding: 20px;
   margin-bottom: 30px;
+  position: relative;
 }
 .filter-title {
   color: #424242;
@@ -758,6 +767,36 @@ input.form-control-sojam::-webkit-input-placeholder {
 }
 .nav-navbar-filter {
   display: none;
+}
+.nav-navbar-filter.open {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 69px;
+  z-index: 8;
+  background-color: #fff;
+  list-style-type: none;  
+  padding: 20px;
+  margin: 0;
+  box-shadow: 0px 3px 6px 0px rgba(232, 232, 232, 1); 
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(232, 232, 232, 1); 
+}
+.nav-navbar-filter.open .filter-theme-title {
+  margin-bottom: 15px;
+}
+.filter-theme-title:last-child {
+  margin-bottom: 0;
+}
+.filter-theme-title a {
+  font-size: 0.928em;
+  color: #898989;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+.filter-theme-title a:hover,
+.filter-theme-title a:active,
+.filter-theme-title a:focus {
+  text-decoration: none;
 }
 .filter-toggle {
   background-image: url(../images/publication-icon.png);
