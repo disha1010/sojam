@@ -24,24 +24,6 @@ $(document).ready(function () {
     $('.navbar-collapse-sojam').animate({ width: 'toggle' });
   });
 
-
-  // slider nav animate
-  var progressBarOptions = {
-    startAngle: -1.55,
-    size: 25,
-      value: 1,
-      fill: {
-      color: '#fff'
-    }
-  }
-  
-  $('.main .carousel-control-sojam.right').circleProgress(progressBarOptions).on('circle-animation-progress', function(event, progress, stepValue) {});
-  
-  $('.main .carousel-control-sojam').click(function() {
-      $('.main .carousel-control-sojam.right').circleProgress(progressBarOptions).on('circle-animation-progress', function(event, progress, stepValue) {
-    });
-  });
-});
 // map
 function initMap() {
   // Styles a map in night mode.
@@ -151,3 +133,31 @@ function setMarkers(map) {
     });
   }
 }
+
+// slider nav indicator animation
+var progressBarOptionsSlow = {
+  startAngle: -1.55,
+  size: 25,
+  value: 1,
+  animation: { duration: 5000, easing: "linear" },
+  fill: { color: '#fff' }
+}
+var progressBarOptionsFast = {
+  startAngle: -1.55,
+  size: 25,
+  value: 1,
+  animation: { duration: 600, easing: "circleProgressEasing" },
+  fill: { color: '#fff' }
+}
+var myIndicator = $('.main .carousel-control-sojam.right');
+myIndicator.circleProgress(progressBarOptionsSlow);
+// carousel
+var myCarousel = $('#myCarousel');
+myCarousel.on('slide.bs.carousel', function () {
+  myIndicator.circleProgress(progressBarOptionsFast);
+});
+myCarousel.on('slid.bs.carousel', function () {
+  myIndicator.circleProgress(progressBarOptionsSlow);
+});
+
+});// /doc.ready
