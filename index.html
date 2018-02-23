@@ -461,29 +461,32 @@
     setMarkers(map);
   }  
   var partners = [
-    ['Волгоград', 48.707103, 44.516939, 4],
-    ['Ростов-на-Дону', 47.222543, 39.718732, 3],
-    ['Краснодар', 45.035566, 38.974711, 2],
-    ['Ставрополь', 45.044521, 42.969083, 1]
+    ['Волгоград',  48.707103, 44.516939, 4, 'ОАО «Николаевское хлебоприёмное» Волгоградская область'],
+    ['Ростов-на-Дону', 47.222543, 39.718732, 3, 'ОАО «Николаевское хлебоприёмное» Ростовская область'],
+    ['Краснодар', 45.035566, 38.974711, 2, 'ОАО «Николаевское хлебоприёмное» Краснодарская область'],
+    ['Ставрополь', 45.044521, 42.969083, 1, 'ОАО «Николаевское хлебоприёмное» Ставропольская область']
   ];
 
   
   function setMarkers(map) {
-    var image = {
-      url: 'images/map-marker.png',
-      // This marker is 20 pixels wide by 32 pixels high.
-      size: new google.maps.Size(43, 54),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(21, 54),
-      labelOrigin: new google.maps.Point(21, 60)
-    };
-    var shape = {
-      coords: [1, 1, 1, 20, 18, 20, 18, 1],
-      type: 'poly'
-    };
     for (var i = 0; i < partners.length; i++) {
       var partner = partners[i];
-      var markerLabel = partners[i][0];
+      var markerLabel = partner[0];
+      var contentString = partner[4];
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+      var image = {
+        url: 'images/map-marker.png',
+        size: new google.maps.Size(43, 54),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(21, 54),
+        labelOrigin: new google.maps.Point(21, 60)
+      };
+      var shape = {
+        coords: [1, 1, 1, 53, 42, 53, 42, 1],
+        type: 'poly'
+      };
       var marker = new google.maps.Marker({
         position: {
           lat: partner[1],
@@ -501,6 +504,11 @@
           fontWeight: "600"
         }
       });
+      var clickListner = (function(infowindow, map, marker) {
+        infowindow.open(map, marker);
+      }).bind({}, infowindow, map, marker)
+
+      marker.addListener('click', clickListner);
     }
   }
   </script>

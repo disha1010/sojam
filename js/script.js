@@ -30,6 +30,12 @@ $(document).ready(function () {
     $('.nav-navbar-filter').toggleClass('open');
   });
 
+  // success message
+  $('#contact-form').submit(function (e) {
+    console.log("hi");
+    $('.message').removeClass('hide').slideDown().show();
+    e.preventDefault();
+  });
   // slider nav indicator animation
   var progressBarOptionsSlow = {
     startAngle: -1.55,
@@ -65,5 +71,4 @@ $(document).ready(function () {
   myCarousel.on('slid.bs.carousel', function () {
     myIndicator.circleProgress(progressBarOptionsSlow);
   });
-
 });

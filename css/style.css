@@ -181,7 +181,7 @@ h4 {
   font-size: 0.928em;
   font-family: "OpenSans", Roboto;
   font-weight: 600;   
-  padding: 2px 15px 3px; 
+  padding: 4px 15px 4px; 
 }
 .btn-sojam:hover {
   background-color: #ab2711;
@@ -754,6 +754,10 @@ input.form-control-sojam::-webkit-input-placeholder {
   border: 1px solid #acacac;   
   padding: 9px 10px 10px 10px;
 }
+.news .carousel-control-sojam:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1)
+}
 .carousel-control-sojam.left {
   right: 60px;
   bottom: 25px;
@@ -1008,8 +1012,8 @@ input.form-control-sojam::-webkit-input-placeholder {
 .feedback-form {
   text-align: center;
 }
-.feedback-form .message {
-  /* display: none; */
+.feedback-form .message.hide {
+  display: none;
 } 
 .form {
   margin: 0 auto;
