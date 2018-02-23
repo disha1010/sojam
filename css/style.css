@@ -161,6 +161,7 @@ h4 {
   text-align: left;
   height: 47px;
   width: 265px;
+  padding: 10px 0 10px 5px;
 }
 .breadcrumbs-item {
   font-size: 0.928em;
