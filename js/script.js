@@ -30,12 +30,12 @@ $(document).ready(function () {
     $('.nav-navbar-filter').toggleClass('open');
   });
 
-  // success message
+  // form inits
   $('#contact-form').submit(function (e) {
-    console.log("hi");
     $('.message').removeClass('hide').slideDown().show();
     e.preventDefault();
   });
+  
   // slider nav indicator animation
   var progressBarOptionsSlow = {
     startAngle: -1.55,
@@ -62,13 +62,15 @@ $(document).ready(function () {
     }
   }
   var myIndicator = $('.main .carousel-control-sojam.right');
-  myIndicator.circleProgress(progressBarOptionsSlow);
-  // carousel
-  var myCarousel = $('.main #myCarousel');
-  myCarousel.on('slide.bs.carousel', function () {
-    myIndicator.circleProgress(progressBarOptionsFast);
-  });
-  myCarousel.on('slid.bs.carousel', function () {
+  if(myIndicator && myIndicator.length){
     myIndicator.circleProgress(progressBarOptionsSlow);
-  });
+    // carousel
+    var myCarousel = $('.main #myCarousel');
+    myCarousel.on('slide.bs.carousel', function () {
+      myIndicator.circleProgress(progressBarOptionsFast);
+    });
+    myCarousel.on('slid.bs.carousel', function () {
+      myIndicator.circleProgress(progressBarOptionsSlow);
+    });
+}
 });
