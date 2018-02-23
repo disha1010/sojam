@@ -1,3 +1,8 @@
+@media screen and (min-width: 420px) and (max-width: 768px) {  
+  .header .navbar-toggle__black {
+    margin-right: -15px;
+  }
+}
 @media screen and (min-width: 768px) {
   h2 {
     font-size: 1.5em;
@@ -7,6 +12,9 @@
   }
   h4 {
     font-size: 1.286em;
+  }
+  .header {
+    padding: 15px 0;
   }
   .navbar-header-sojam {
     float: unset;
@@ -38,14 +46,13 @@
   }
   .header-selfservice {
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 0px;
     font-size: 0.857em;
     font-weight: 700;
     text-transform: uppercase;
     display: flex;
-    /* align-items: center;
-    float: right; */
+    align-items: center;
   }
   .header .contacts-item {
     margin-bottom: 0;
@@ -58,7 +65,8 @@
     height: 380px;
   }
   .main .slide-title {
-    width: calc(100% - (157px));
+    width: calc(100% - (157px + 30px));
+    left: 15px;
   }
   .main .slide-logo {
     background-image: url(../images/pirigren.png);
@@ -68,7 +76,7 @@
   }
   .main .slide-info {
     width: 157px;
-    left: calc(100% - (157px));
+    left: calc(100% - (157px + 15px));
     padding-top: 30px;
   }
   .main .slide-info .info-item {
@@ -157,8 +165,15 @@
   .news .carousel-wrapper {
     margin-bottom: 35px;
   }
+  .news .slider-bg {
+    min-height: 379px;
+    width: 96%;
+  }
   .news .slider .article {
     display: flex;
+  }
+  .news .article-desc {
+    min-height: 184px;
   }
   .news .publications .article {
     margin-bottom: 30px;
@@ -170,20 +185,22 @@
     min-height: 75px;
   }
   .news .slider .article-txt {
-    width: 70%;;
+    width: 70%;
+    padding: 15px 28px 25px 29px;
   }
   .nav-navbar-filter {
     display: block;
   }  
   .news .slider .date {
-    right: -5px;
+    right: -13px;
+    margin-bottom: 25px;
   }
-  .carousel-control-sojam.left {
-    right: 60px;
+  .news .carousel-control-sojam.left {
+    right: 68px;
     bottom: 25px;
   }
-  .carousel-control-sojam.right {
-    right: 25px;
+  .news .carousel-control-sojam.right {
+    right: 28px;
     bottom: 25px;
   }
   .filter-toggle {
@@ -209,14 +226,16 @@
     padding-top: 50px;
   }
   .faq .article-txt {
-    padding: 20px 0 0;
+    padding: 0;
     margin-right: 35px;
     margin-left: 35px;
   }
   .faq-wrapper {    
-    padding-bottom: 15px;
     margin-bottom: 75px;
   }
+  .faq-answer {
+    padding-left: 20px;
+  } 
   /* feedback page */
   .feedback .section-title {
     text-align: center;
@@ -251,7 +270,7 @@
   .contacts-page .contacts__main {
     padding: 25px 35px 10px;
   }
-  .contacts-page .contacts-item {
+  .contacts-page .main-content .contacts-item {
     margin-bottom: 15px;
   }
   .contacts-page .article-title {
@@ -272,23 +291,21 @@
     font-size: 2em;
   }
   h4 {
-    font-size: 1.857em;
+    font-size: 1.286em;
   }
   .navbar-nav-sojam {
-    margin-top: 25px;
+    margin-top: 35px;
   } 
   .navbar-nav-sojam>.navbar-nav-item>a, 
   input.form-control-sojam::placeholder,
   input.form-control-sojam::-webkit-input-placeholder,
   .navbar-form-sojam .form-control-sojam {
-    font-size: 1em;
+    font-size: 14px;
     font-weight: 600;
+    padding-bottom: 1px
   } 
   .navbar-form-sojam {
     padding-bottom: 0;
-  }
-  .navbar-nav-sojam>.navbar-nav-item:last-child>a {
-    padding-right: 0px;
   }
   .navbar-nav-sojam>.navbar-nav-item>a:hover,
   .navbar-nav-sojam>.navbar-nav-item>a:focus,
@@ -301,14 +318,11 @@
   .header .language {
     margin-right: 40px;
   } 
-  .header-selfservice {
-    right: -15px;
-  }
   .main .main-slide {
     height: 470px;
   }
   .main .slide-title {
-    width: calc(100% - (270px));
+    width: calc(100% - (270px + 30px));
   }
   .main .slide-logo {
     background-image: url(../images/pirigren.png);
@@ -318,7 +332,7 @@
   }
   .main .slide-info {
     width: 270px;
-    left: calc(100% - (270px));
+    left: calc(100% - (270px + 15px));
   }
   .main .slide-info .info-item {
     font-size: 1.299em;
@@ -348,6 +362,17 @@
   .slider .banner-title {
     max-width: 70%;
   }
+  .main .carousel-control-sojam {
+    transform: scale(1.423);    
+    -webkit-transform: scale(1.423);
+  }
+  .main .carousel-control-sojam.left {
+    right: 70px;
+  }
+  .main .carousel-control-sojam:hover {
+    transform: scale(1.565);    
+    -webkit-transform: scale(1.565);
+  }
   .banner-category {
     top: 12px;
     left: 12px;
@@ -369,23 +394,19 @@
   .main .clients {
     padding: 0;
   }
-  .main .clients .right-md {
-    position: relative;
-    top: unset;
-    right: unset;
-    bottom: unset;
-    left: unset;
-  }
   .main .clients .article {
     text-align: left;
     padding-top: 85px;
     padding-bottom: 60px;
-    padding-right: 15px;
     margin-bottom: 0;
-    min-height: 439px;
   }
   .main .clients .map-sojam {
-    height: 439px;
+    height: 460px;
+  }
+  .main .clients .center-sm {
+    position: relative;
+    top: 0;
+    padding: 0 15px;
   }
   .main .clients {
     margin-bottom: 0;
@@ -455,8 +476,28 @@
   .news .section-title {
     margin-bottom: 35px;
   }
+  .news .slider-bg {
+    min-height: 420px;
+    width: 100%;
+  }  
+  .news .slider .date {
+    margin-bottom: 16px;
+  }
   .news .slider .article-txt {
     width: 50%;
+    padding-bottom: 40px;
+  }
+  .news .carousel-wrapper .article-title {
+    font-size: 1.786em;
+    margin-bottom: 20px;
+  }
+  .news .carousel-control-sojam.left {
+    bottom: 45px;
+    right: 65px;
+  }
+  .news .carousel-control-sojam.right {
+    bottom: 45px;
+    right: 25px;
   }
   .filter-title {
     font-size: 1.286em;
@@ -475,9 +516,15 @@
     margin-right: 40px;
     margin-left: 40px;
   }
+  .faq .article-title {
+    width: 68%;
+  }
   .faq-wrapper {    
     padding-bottom: 15px;
     margin-bottom: 80px;
+  }
+  .faq .article-title-wrapper {
+    align-items: start;
   }
   /* feedback page */
   .feedback .section {
@@ -498,7 +545,7 @@
   .contacts-page .contacts__main {
     padding: 35px 35px 10px;
   }
-  .contacts-page .contacts-item {
+  .contacts-page .main-content .contacts-item {
     margin-bottom: 25px;
   }
   .contacts-page .article-title {
