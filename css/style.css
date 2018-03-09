@@ -1091,6 +1091,10 @@ input.form-control-sojam::placeholder {
   font-weight: 600;
   color: #424242;
 }
+.feedback-form .textarea .form-control-sojam::-moz-placeholder,
+.feedback-form input.form-control-sojam::-moz-placeholder {
+  color: #a2a9b4;
+}
 .feedback-form .textarea .form-control-sojam::placeholder,
 .feedback-form .textarea .form-control-sojam::-webkit-input-placeholder,
 .feedback-form input.form-control-sojam::placeholder,
