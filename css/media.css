@@ -32,7 +32,7 @@
   }
   .header .navbar-toggle__black {
     display: block;
-    margin-right: 0px;
+    margin: 10px 0 0;
     padding: 20px 0 0;
   }
   .navbar-nav-sojam>.navbar-nav-item>a, 
@@ -42,7 +42,7 @@
     font-size: 1.143em;
   } 
   .navbar-sojam .navbar-header-sojam .brand-logo {
-    margin-left: -5px;
+    margin-left: 0px;
   }
   .header-selfservice {
     position: absolute;
@@ -294,7 +294,7 @@
     font-size: 1.286em;
   }
   .navbar-nav-sojam {
-    margin-top: 35px;
+    margin-top: 34px;
   } 
   .navbar-nav-sojam>.navbar-nav-item>a, 
   input.form-control-sojam::placeholder,

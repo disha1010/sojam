@@ -1,20 +1,21 @@
 $(document).ready(function () {
   // accordion
-  function close_accordion() {
-    $('.accordion-toggle').removeClass('active');
-    $('.faq-answer').slideUp(300).removeClass('open');
-  }
+  $('.open .faq-answer').css('display', 'block');
   $('.article-title-wrapper').click(function (e) {
     e.preventDefault();
-    if ($(this).find('.accordion-toggle').is('.active')) {
-      close_accordion();
+    var clickedFaqItem = $(this).closest('.faq-item');
+
+    if(clickedFaqItem.hasClass('open')){
+      clickedFaqItem.removeClass('open');
+      clickedFaqItem.find('.faq-answer').slideUp();
     } else {
-      close_accordion();
-      $(this).find('.accordion-toggle').addClass('active');
-      $(this).parents('.faq-item')
-        .find('.faq-answer')
-        .slideDown(300)
-        .addClass('open');
+      var faqItemToClose = $('.faq-item.open');
+      if(faqItemToClose.length){
+        faqItemToClose.removeClass('open');
+        faqItemToClose.find('.faq-answer').slideUp();
+      }
+      clickedFaqItem.addClass('open');
+      clickedFaqItem.find('.faq-answer').slideDown();
     }
   });
   // top-menu

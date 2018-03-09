@@ -58,14 +58,13 @@ h4 {
   min-height: unset;
 }
 .header .navbar-toggle__black {
-  margin: 9px 0 10px 0;
+  margin: 16px 0 15px 0;
   padding: 0;
   border: none;
-  height: 18px;
 }
 .header .navbar-toggle__black .nav-icon {
   width: 17px;
-  height: 3px;
+  height: 15px;
   position: relative;
   margin: 0 auto;
   -webkit-transform: rotate(0deg);
@@ -145,13 +144,13 @@ h4 {
   box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1);
   -webkit-box-shadow: 0px 0px 14.24px 1.76px rgba(231, 231, 231, 1);
 }
-.active.arrow__down {
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-}
 .arrow__down {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
+}
+.open .arrow__down {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
 }
 .map-mark-info {
   font-size: 1em;
@@ -410,7 +409,9 @@ h4 {
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
-/* input.form-control-sojam::-moz-placeholder, */
+input.form-control-sojam::-moz-placeholder {
+  color: #424242;
+}
 input.form-control-sojam::-webkit-input-placeholder,
 input.form-control-sojam::placeholder {
   color: #424242;
@@ -422,8 +423,6 @@ input.form-control-sojam::placeholder {
   box-shadow: none;
   padding: 0;
   width: 4em;
-  /* height: 1.2em; */
-  font-size: 1em;
   background: none;
   font-weight: 600;
   color: #424242;
@@ -934,9 +933,6 @@ input.form-control-sojam::placeholder {
   font-weight: 600;
   padding-bottom: 20px;
   display: none;
-}
-.open.faq-answer {
-  display: block;
 }
 .faq-answer-item {
   position: relative;
