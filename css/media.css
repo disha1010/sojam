@@ -221,7 +221,10 @@
     font-size: 1.071em;
     margin-top: -5px;
   }
-  /* faq */
+  /* faq */  
+  .faq .main-content {
+    min-height: 755px;
+  }
   .faq .section {
     padding-top: 50px;
   }
