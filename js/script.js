@@ -71,7 +71,7 @@ $(document).ready(function () {
   function togglePublicationsFilter(){
     publicationsFilter.disabled = publicationsFilter.disabled ? undefined : true;
     $('.publication-filter').toggleClass('disable');
-    $('.publication-more').toggleClass('disable');
+    $('.show-more').toggleClass('disable');
   }
 
   var publicationsFilter = {
@@ -89,12 +89,12 @@ $(document).ready(function () {
     $('.filter-button').removeClass('selected')
     clickedButton.addClass('selected');
   })
-  $(document).on('click', '.publication-more', function(){
+  $(document).on('click', '.publications .show-more', function(){
     filterPublications();
   })
  
    // reviews show more
-   function filterreviews() {
+   function filterReviews() {
     if (reviewsFilter.disabled) {
       return;
     }
@@ -109,7 +109,7 @@ $(document).ready(function () {
         method: 'GET',// or POST
         data: reviewsFilter,
         beforeSend: function () {
-          togglereviewsFilter(true);
+          toggleReviewsFilter(true);
         }
       })
       .done(function (data) {// data is plain html
@@ -127,14 +127,14 @@ $(document).ready(function () {
         $('.reviews-message-wrapper').html(message);
       })
       .always(function (data) {
-        togglereviewsFilter(false);
+        toggleReviewsFilter(false);
       });
   }
 
-  function togglereviewsFilter(){
+  function toggleReviewsFilter(){
     reviewsFilter.disabled = reviewsFilter.disabled ? undefined : true;
     $('.publication-filter').toggleClass('disable');
-    $('.publication-more').toggleClass('disable');
+    $('.show-more').toggleClass('disable');
   }
 
   var reviewsFilter = {
@@ -143,8 +143,8 @@ $(document).ready(function () {
     count: 6,
     disabled: undefined,
   }
-  $(document).on('click', '.publication-more', function(){
-    filterreviews();
+  $(document).on('click', '.reviews .show-more', function(){
+    filterReviews();
   })
 
   // form inits
