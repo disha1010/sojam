@@ -93,6 +93,60 @@ $(document).ready(function () {
     filterPublications();
   })
  
+   // reviews show more
+   function filterreviews() {
+    if (reviewsFilter.disabled) {
+      return;
+    }
+    if (!reviewsFilter.offset) {
+      reviewsFilter.offset = 0;
+    }
+    if (!reviewsFilter.count) {
+      reviewsFilter.count = 6;
+    }
+    $.ajax({
+        url: 'reviewsFilterSample.html',
+        method: 'GET',// or POST
+        data: reviewsFilter,
+        beforeSend: function () {
+          togglereviewsFilter(true);
+        }
+      })
+      .done(function (data) {// data is plain html
+        var reviewsContainer = $('.reviews .row');
+        if(reviewsContainer.length){
+          if(reviewsFilter.offset === 0){
+            reviewsContainer.empty();
+          }
+          reviewsContainer.append(data);
+          reviewsFilter.offset += reviewsFilter.count;
+        }
+      })
+      .fail(function (data) {
+        var message = '<div class="alert alert-danger alert-dismissable message"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Ошибка!</strong> Произошла ошибка при загрузке публикаций</div>'
+        $('.reviews-message-wrapper').html(message);
+      })
+      .always(function (data) {
+        togglereviewsFilter(false);
+      });
+  }
+
+  function togglereviewsFilter(){
+    reviewsFilter.disabled = reviewsFilter.disabled ? undefined : true;
+    $('.publication-filter').toggleClass('disable');
+    $('.publication-more').toggleClass('disable');
+  }
+
+  var reviewsFilter = {
+    type: '',
+    offset: 6,
+    count: 6,
+    disabled: undefined,
+  }
+  $(document).on('click', '.publication-more', function(){
+    filterreviews();
+  })
+
   // form inits
   $('#contact-form').submit(function (e) {
     $('.message').removeClass('hide').slideDown().show();
