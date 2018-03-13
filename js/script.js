@@ -31,6 +31,68 @@ $(document).ready(function () {
     $('.nav-navbar-filter').toggleClass('open');
   });
 
+  function filterPublications() {
+    if (publicationsFilter.disabled) {
+      return;
+    }
+    if (!publicationsFilter.offset) {
+      publicationsFilter.offset = 0;
+    }
+    if (!publicationsFilter.count) {
+      publicationsFilter.count = 6;
+    }
+    $.ajax({
+        url: 'publicationsFilterSample.html',
+        method: 'GET',// or POST
+        data: publicationsFilter,
+        beforeSend: function () {
+          togglePublicationsFilter(true);
+        }
+      })
+      .done(function (data) {// data is plain html
+        var publicationsContainer = $('.publications .row');
+        if(publicationsContainer.length){
+          if(publicationsFilter.offset === 0){
+            publicationsContainer.empty();
+          }
+          publicationsContainer.append(data);
+          publicationsFilter.offset += publicationsFilter.count;
+        }
+      })
+      .fail(function (data) {
+        var message = '<div class="alert alert-danger alert-dismissable message"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a><strong>Ошибка!</strong> Произошла ошибка при загрузке публикаций</div>'
+        $('.publications-message-wrapper').html(message);
+      })
+      .always(function (data) {
+        togglePublicationsFilter(false);
+      });
+  }
+
+  function togglePublicationsFilter(){
+    publicationsFilter.disabled = publicationsFilter.disabled ? undefined : true;
+    $('.publication-filter').toggleClass('disable');
+    $('.publication-more').toggleClass('disable');
+  }
+
+  var publicationsFilter = {
+    type: '',
+    offset: 6,
+    count: 6,
+    disabled: undefined,
+  }
+  $(document).on('click', '.filter-button', function(e){
+    e.preventDefault();
+    var clickedButton = $(this);
+    publicationsFilter.type = clickedButton.data('type');
+    publicationsFilter.offset = 0;
+    filterPublications();
+    $('.filter-button').removeClass('selected')
+    clickedButton.addClass('selected');
+  })
+  $(document).on('click', '.publication-more', function(){
+    filterPublications();
+  })
+ 
   // form inits
   $('#contact-form').submit(function (e) {
     $('.message').removeClass('hide').slideDown().show();

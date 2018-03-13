@@ -808,10 +808,11 @@ input.form-control-sojam::placeholder {
   margin-bottom: 30px;
   position: relative;
 }
-.filter-title {
+.filter-title .filter-button {
   color: #424242;
   font-size: 1em;
   font-weight: 700;
+  text-decoration: none;
 }
 .nav-navbar-filter {
   display: none;
@@ -835,16 +836,19 @@ input.form-control-sojam::placeholder {
 .filter-theme-title:last-child {
   margin-bottom: 0;
 }
-.filter-theme-title a {
+.filter-theme-title .filter-button {
   font-size: 0.928em;
   color: #898989;
   text-transform: uppercase;
   margin-right: 30px;
 }
-.filter-theme-title a:hover,
-.filter-theme-title a:active,
-.filter-theme-title a:focus {
+.filter-theme-title .filter-button:hover,
+.filter-theme-title .filter-button:active,
+.filter-theme-title .filter-button:focus {
   text-decoration: none;
+}
+.publication-filter .filter-button.selected {
+  color: #4c7b12;
 }
 .filter-toggle {
   background-image: url(../images/settings.svg);
@@ -885,7 +889,9 @@ input.form-control-sojam::placeholder {
 .publication-more:hover {
   background-color: #f8f9fb;
 }
-.publication-more:active {
+.publication-more:active,
+.publication-more.disable,
+.publication-filter.disable {
   background-color: #f5f6f9;
 }
 /* faq page */
