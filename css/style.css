@@ -1144,11 +1144,15 @@ input.form-control-sojam::placeholder {
   padding: 12px 25px 11px;
   border-radius: 1.607em;
 }
-.thumb-image {
+.image-holder {
   width: 133px;
+  height: 133px;
   position: absolute;
   left: 0;
   top: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
 }
 /* contacts */
 .contacts-page .article-title {
