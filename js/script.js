@@ -5,12 +5,12 @@ $(document).ready(function () {
     e.preventDefault();
     var clickedFaqItem = $(this).closest('.faq-item');
 
-    if(clickedFaqItem.hasClass('open')){
+    if (clickedFaqItem.hasClass('open')) {
       clickedFaqItem.removeClass('open');
       clickedFaqItem.find('.faq-answer').slideUp();
     } else {
       var faqItemToClose = $('.faq-item.open');
-      if(faqItemToClose.length){
+      if (faqItemToClose.length) {
         faqItemToClose.removeClass('open');
         faqItemToClose.find('.faq-answer').slideUp();
       }
@@ -28,10 +28,10 @@ $(document).ready(function () {
 
   // filter-nav
   $('.filter-toggle').on('click', function (e) {
-    e.stopPropagation(); 
+    e.stopPropagation();
     $(".nav-navbar-filter").toggleClass('open');
   });
-  $(document).click( function(){
+  $(document).click(function () {
     $('.nav-navbar-filter').removeClass('open');
   });
 
@@ -47,16 +47,16 @@ $(document).ready(function () {
     }
     $.ajax({
         url: 'publicationsFilterSample.html',
-        method: 'GET',// or POST
+        method: 'GET', // or POST
         data: publicationsFilter,
         beforeSend: function () {
           togglePublicationsFilter(true);
         }
       })
-      .done(function (data) {// data is plain html
+      .done(function (data) { // data is plain html
         var publicationsContainer = $('.publications .row');
-        if(publicationsContainer.length){
-          if(publicationsFilter.offset === 0){
+        if (publicationsContainer.length) {
+          if (publicationsFilter.offset === 0) {
             publicationsContainer.empty();
           }
           publicationsContainer.append(data);
@@ -72,7 +72,7 @@ $(document).ready(function () {
       });
   }
 
-  function togglePublicationsFilter(){
+  function togglePublicationsFilter() {
     publicationsFilter.disabled = publicationsFilter.disabled ? undefined : true;
     $('.publication-filter').toggleClass('disable');
     $('.show-more').toggleClass('disable');
@@ -84,7 +84,7 @@ $(document).ready(function () {
     count: 6,
     disabled: undefined,
   }
-  $(document).on('click', '.filter-button', function(e){
+  $(document).on('click', '.filter-button', function (e) {
     e.preventDefault();
     var clickedButton = $(this);
     publicationsFilter.type = clickedButton.data('type');
@@ -93,12 +93,12 @@ $(document).ready(function () {
     $('.filter-button').removeClass('selected')
     clickedButton.addClass('selected');
   })
-  $(document).on('click', '.publications .show-more', function(){
+  $(document).on('click', '.publications .show-more', function () {
     filterPublications();
   })
- 
-   // reviews show more
-   function filterReviews() {
+
+  // reviews show more
+  function filterReviews() {
     if (reviewsFilter.disabled) {
       return;
     }
@@ -110,16 +110,16 @@ $(document).ready(function () {
     }
     $.ajax({
         url: 'reviewsFilterSample.html',
-        method: 'GET',// or POST
+        method: 'GET', // or POST
         data: reviewsFilter,
         beforeSend: function () {
           toggleReviewsFilter(true);
         }
       })
-      .done(function (data) {// data is plain html
+      .done(function (data) { // data is plain html
         var reviewsContainer = $('.reviews .row');
-        if(reviewsContainer.length){
-          if(reviewsFilter.offset === 0){
+        if (reviewsContainer.length) {
+          if (reviewsFilter.offset === 0) {
             reviewsContainer.empty();
           }
           reviewsContainer.append(data);
@@ -135,7 +135,7 @@ $(document).ready(function () {
       });
   }
 
-  function toggleReviewsFilter(){
+  function toggleReviewsFilter() {
     reviewsFilter.disabled = reviewsFilter.disabled ? undefined : true;
     $('.publication-filter').toggleClass('disable');
     $('.show-more').toggleClass('disable');
@@ -147,7 +147,7 @@ $(document).ready(function () {
     count: 6,
     disabled: undefined,
   }
-  $(document).on('click', '.reviews .show-more', function(){
+  $(document).on('click', '.reviews .show-more', function () {
     filterReviews();
   })
 
@@ -194,6 +194,26 @@ $(document).ready(function () {
       myIndicator.circleProgress(progressBarOptionsSlow);
     });
   }
+
+  // feedback image download
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var imageHolder = $('.image-holder');
+      imageHolder.empty();
+
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $("<img />", {
+          "src": e.target.result,
+          "class": "thumb-image"
+        }).appendTo(imageHolder);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  $("#fileUpload").on('change', function () {
+    readURL(this);
+  });
 });
 
 function initMap() {
