@@ -27,8 +27,12 @@ $(document).ready(function () {
   });
 
   // filter-nav
-  $('.filter-toggle').on('click', function () {
-    $('.nav-navbar-filter').toggleClass('open');
+  $('.filter-toggle').on('click', function (e) {
+    e.stopPropagation(); 
+    $(".nav-navbar-filter").toggleClass('open');
+  });
+  $(document).click( function(){
+    $('.nav-navbar-filter').removeClass('open');
   });
 
   function filterPublications() {

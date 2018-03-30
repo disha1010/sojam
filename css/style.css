@@ -1015,8 +1015,8 @@ input.form-control-sojam::placeholder {
   font-size: 0.857em;
   padding: 5px 15px 4px;
 }
-.feedback .capcha-img {
-  padding-bottom: 7px;
+.feedback-form .capcha-img {
+  padding-bottom: 10px;
 }
 /* request-form */
 .feedback-form .block-txt {
@@ -1074,9 +1074,9 @@ input.form-control-sojam::placeholder {
   position: relative;
 }
 .feedback-form .select-control {
-  appearance:none;
-  -moz-appearance:none; /* Firefox */
-  -webkit-appearance:none; /* Safari and Chrome */
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
   z-index: 10;
 }
 .feedback-form .select-arrow {
